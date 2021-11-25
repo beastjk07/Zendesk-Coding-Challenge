@@ -1,0 +1,28 @@
+nav {
+  width: 60px;
+  padding: 0.75rem 0;
+  background-color: #02363d;
+  color: aliceblue;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.zendesk-icon {
+  margin-bottom: 2rem;
+}
+
+.ticket-icon {
+  cursor: pointer;
+}
+
+.ticket-icon:hover {
+  color: white;
+}
+
+.tickets-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
