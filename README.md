@@ -1,19 +1,29 @@
 # Zendesk challenge 2021
 
-Frontend is hosted here: https://main--sad-jang-97d306.netlify.app/
-Backend is hosted here: https://zendesk-server.herokuapp.com/
-
 ## Content
 - [Summary](#summary)
 - [Installation and Usage](#installation-and-usage)
 
 ## Summary
 
+For this challenge, I used React.js library for the frontend part and Node.js for the backend. I believe I am more comfortable and confident in JavaScript so I decided to take this path for challenge. 
+
+Let's talk about libraries I used - 
+
+1. Bootstrap 5 and React Bootstrap
+2. Axios - for making API calls in the backend
+3. React-Paginate - For using the pagination functionality if the list of tickets is greater than 25.
+
 For this project, I decided to use React.js for the Frontend, and Node.js/Express for the backend. 
 
-I decided to go with React for the frontend as it is what I know best, and I wanted the chance to use a few libraries I have been meaning to learn for a while now: React-query and React-table. These were both very useful, React-query especially has a very friendly caching system which was quite useful in ensuring that our api was not called more than needed. I wrote a few basic tests for my TicketTable component, using react-testing-library (RTL). These tests were not extremely extensive and if I had more time I would write tests for my other components as well, along with mocking my react-query queries.
+In the frontend, I have used both class component and functional component. For pagination functionality, I have made two states for maintaning the tickets per page. Whenever the home page is loaded, it will call all the tickets at first and then bifurcate into pages. Heres how we do -  
+  - offset(initial value = 0) -> for maintaining start and end of the ticket list of that page. 
+  - perPage(value=25) -> so this would allow how many pages we want per page.
+So, for every page we would do offset = page selected*perPage and (offset, offset+perPage). Example - for 0th page - List(0,25), 1st page - List(25,50) and so on.
 
-For the backend, I used Node.js and Express as these are also the technologies I am the most familiar with for creating APIs. I decided to use express over the http module as it abstracts away the complexity of setting up an HTTP server, letting me focus on the task at hand. It also leads to much easier abstract of logic, and usage of the MVC (In this case, without the Views) pattern. For testing the backend I used Mocha and chai, to run unit tests run the command ```npm run test``` in the server directory.
+For displaying each ticket information, I have made modal for the ease of user. While iterating over every ticket to display, each ticket is assigned ID which will be used to call an API for individual information of ticket. If user wants to get information of ticket, they would click on the particular ticket which would trigger a modal and show the detailed information of that ticket. 
+
+For the backend, I used Node.js and Express for api calls and chai library for writing down test cases. I have made a different file to store the authorization credentials which I will be using during api calls.
 
 ## Installation and Usage
 
