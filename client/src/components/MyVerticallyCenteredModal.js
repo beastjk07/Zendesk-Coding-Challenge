@@ -32,18 +32,19 @@ export function MyVerticallyCenteredModal(props) {
           {props.ticket.description ? props.ticket.description : "Not Mentioned"}
         </p>
         <hr />
-        <div className="row">
-            <h6 className = "font-weight-bold">Tags</h6>
-
+        <h6 className = "font-weight-bold mt-1">Tags</h6>
+        <div className="d-flex justify-content-starts">
+            
             {
                 props.ticket.tags.map(x => {
-                    return <span className="col-md-4">
+                    return <span className="p-2 col-example text-left">
                         <button type="button" class="btn btn-success btn-sm">{x}</button>
                     </span> 
                     
                 })  
             }
         </div>
+        <hr />
         <div className = "row">
             <div className="col-md-4">
                 <h6 className = "font-weight-bold">Priority</h6>

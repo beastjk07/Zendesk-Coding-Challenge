@@ -129,7 +129,7 @@ export class UserList extends Component {
                 </div>
               </div>
               <div className="col-md-4">
-                <button className="btn btn-success" onClick = {this.handleonClick}>Sort UserList</button>
+                <button className="btn btn-success" onClick = {this.handleonClick}>Sort Tickets by ID</button>
               </div>
               <div className="col-md-4">
                 <button className="btn btn-warning" onClick = {this.handleonRefresh}>Refresh</button>
