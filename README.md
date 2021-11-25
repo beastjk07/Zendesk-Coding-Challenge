@@ -3,7 +3,6 @@
 ## Content
 - [Summary](#summary)
 - [Installation and Usage](#installation-and-usage)
-![myProfile](https://user-images.githubusercontent.com/90352791/143506943-01bd96b1-6a66-4a52-b849-2e3288179a09.png)
 
 ## Summary
 
@@ -21,6 +20,18 @@ In the frontend, I have used both class component and functional component. For 
   - offset(initial value = 0) -> for maintaining start and end of the ticket list of that page. 
   - perPage(value=25) -> so this would allow how many pages we want per page.
 So, for every page we would do offset = page selected*perPage and (offset, offset+perPage). Example - for 0th page - List(0,25), 1st page - List(25,50) and so on.
+
+UI for Ticket viewing - 
+![ss1](https://user-images.githubusercontent.com/90352791/143507165-460ad6f8-0eb9-4484-a539-62ff90eb0ba3.png)
+
+![ss2](https://user-images.githubusercontent.com/90352791/143507169-9dbddde0-30ca-4ac8-8b7d-163591c82330.png)
+
+For Eact Ticket - 
+
+![ss3](https://user-images.githubusercontent.com/90352791/143507207-9f54d849-9c5e-4cea-8f9d-986197ab5838.png)
+
+
+
 
 For displaying each ticket information, I have made modal for the ease of user. While iterating over every ticket to display, each ticket is assigned ID which will be used to call an API for individual information of ticket. If user wants to get information of ticket, they would click on the particular ticket which would trigger a modal and show the detailed information of that ticket. 
 
