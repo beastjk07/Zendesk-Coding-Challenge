@@ -37,7 +37,7 @@ For displaying each ticket information, I have made modal for the ease of user. 
 
 For the backend, I used Node.js and Express for api calls and chai library for writing down test cases. I have made a different file to store the authorization credentials which I will be using during api calls.
 
-##As I had some time on my hand, I tried to implement Search(by Subject) and sort(by ID) feature on the tickets. The sole purpose of this feature was to show the knowledge of controlled components in React.js which is very important part of any UI.
+## As I had some time on my hand, I tried to implement Search(by Subject) and sort(by ID) feature on the tickets. The sole purpose of this feature was to show the knowledge of controlled components in React.js which is very important part of any UI.
 
 ## Installation and Usage
 
