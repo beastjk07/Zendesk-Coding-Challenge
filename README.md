@@ -21,6 +21,10 @@ In the frontend, I have used both class component and functional component. For 
   - perPage(value=25) -> so this would allow how many pages we want per page.
 So, for every page we would do offset = page selected*perPage and (offset, offset+perPage). Example - for 0th page - List(0,25), 1st page - List(25,50) and so on.
 
+
+**As I had some time on my hand, I tried to implement Search(by Subject) and sort(by ID) feature on the tickets. The sole purpose of this feature was to show the knowledge of controlled components in React.js which is very important part of any UI.**
+
+
 UI for Ticket viewing - 
 ![ss1](https://user-images.githubusercontent.com/90352791/143507165-460ad6f8-0eb9-4484-a539-62ff90eb0ba3.png)
 
@@ -36,8 +40,6 @@ For Eact Ticket -
 For displaying each ticket information, I have made modal for the ease of user. While iterating over every ticket to display, each ticket is assigned ID which will be used to call an API for individual information of ticket. If user wants to get information of ticket, they would click on the particular ticket which would trigger a modal and show the detailed information of that ticket.   
 
 For the backend, I used Node.js and Express for api calls and chai library for writing down test cases. I have made a different file to store the authorization credentials which I will be using during api calls.
-
-## As I had some time on my hand, I tried to implement Search(by Subject) and sort(by ID) feature on the tickets. The sole purpose of this feature was to show the knowledge of controlled components in React.js which is very important part of any UI.
 
 ## Installation and Usage
 
