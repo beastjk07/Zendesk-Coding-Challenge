@@ -33,9 +33,11 @@ For Eact Ticket -
 
 
 
-For displaying each ticket information, I have made modal for the ease of user. While iterating over every ticket to display, each ticket is assigned ID which will be used to call an API for individual information of ticket. If user wants to get information of ticket, they would click on the particular ticket which would trigger a modal and show the detailed information of that ticket. 
+For displaying each ticket information, I have made modal for the ease of user. While iterating over every ticket to display, each ticket is assigned ID which will be used to call an API for individual information of ticket. If user wants to get information of ticket, they would click on the particular ticket which would trigger a modal and show the detailed information of that ticket.   
 
 For the backend, I used Node.js and Express for api calls and chai library for writing down test cases. I have made a different file to store the authorization credentials which I will be using during api calls.
+
+##As I had some time on my hand, I tried to implement Search(by Subject) and sort(by ID) feature on the tickets. The sole purpose of this feature was to show the knowledge of controlled components in React.js which is very important part of any UI.
 
 ## Installation and Usage
 
