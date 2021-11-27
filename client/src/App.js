@@ -1,5 +1,5 @@
 import './App.css';
-import UserList from './components/UserList';
+import TicketList from './components/TicketList';
 import Sidebar from './components/Sidebar';
 
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
         <Sidebar />
-        <UserList/>     
+        <TicketList/>     
     </div>
   );
 }

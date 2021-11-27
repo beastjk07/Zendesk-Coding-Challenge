@@ -1,6 +1,6 @@
 const chai = require("chai");
 const chaiHttp = require("chai-http");
-const { response } = require("express");
+const config = require("./configurations/config");
 const server = require("../index");
 
 chai.should();
@@ -13,12 +13,7 @@ describe("Tickets API", () => {
       chai
         .request(server)
         .get("https://zcccodingchallenge231.zendesk.com/tickets.json?page[size]=25", 
-          {
-            auth: {
-              username: 'jpatel82@asu.edu',
-              password: 'Patel@0077'
-            },
-          }
+          config
         )
         .end((err, res) => {
           res.should.have.status(200);
@@ -30,34 +25,13 @@ describe("Tickets API", () => {
           done();
         });
     });
-
-    // it("Should get the next 25 tickets (26 - 50)", (done) => {
-    //   chai
-    //     .request(server)
-    //     .get("/tickets")
-    //     .end((err, res) => {
-    //       res.should.have.status(200);
-    //       chai
-    //         .request(server)
-    //         .get("/tickets")
-    //         .query({ next: true, cursor: res.body.data.meta.after_cursor })
-    //         .end((errNested, resNested) => {
-    //           resNested.should.have.status(200);
-    //           resNested.body.data.tickets.should.be.an("array");
-    //           resNested.body.data.tickets.should.to.have.length("25");
-    //           resNested.body.data.tickets[0].id.should.equal(26);
-    //           resNested.body.data.tickets[24].id.should.equal(50);
-    //         });
-    //       done();
-    //     });
-    // });
   });
   describe("GET /ticket/:id", () => {
     const ticketId = 6;
     it("Should get a single ticket of ID 6", (done) => {
       chai
         .request(server)
-        .get(`https://zcccodingchallenge231.zendesk.com/api/v2/tickets/${ticketId}`)
+        .get(`https://zcccodingchallenge231.zendesk.com/api/v2/tickets/${ticketId}`, config)
         .end((err, res) => {
           res.should.have.status(200);
           res.body.data.ticket.should.be.an("object");
@@ -65,19 +39,19 @@ describe("Tickets API", () => {
           done();
         });
     });
-    it("Should get a 404 (ticket with id doesn't exist)", (done) => {
+    it("Should get an Error 404 (As the ticket with this ID doesn't exist)", (done) => {
       chai
         .request(server)
-        .get("https://zcccodingchallenge231.zendesk.com/api/v2/tickets/105")
+        .get("https://zcccodingchallenge231.zendesk.com/api/v2/tickets/105", config)
         .end((err, res) => {
           res.should.have.status(404);
           done();
         });
     });
-    it("Should get a 400 (ticket with invalid id)", (done) => {
+    it("Should get an Error 400 (ticket with invalid id)", (done) => {
       chai
         .request(server)
-        .get("https://zcccodingchallenge231.zendesk.com/api/v2/tickets/xyz123")
+        .get("https://zcccodingchallenge231.zendesk.com/api/v2/tickets/xyz123", config)
         .end((err, res) => {
           res.should.have.status(400);
           done();

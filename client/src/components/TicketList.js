@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import ReactPaginate from 'react-paginate';
-import '../static/UserList.css'
+import '../static/TicketList.css'
 import { MyVerticallyCenteredModal } from './MyVerticallyCenteredModal';
 
 export class UserList extends Component {
