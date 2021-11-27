@@ -65,6 +65,4 @@ Here is the detailed instructions on how to set up this project and run it local
 1. In client, run npm install to install all dependencies ```npm install```.
 2. Ensure that your server is already running, and then finally run ```npm start```!
 
-#### Tests
-Run tests in both directories with ```npm run test```
 
